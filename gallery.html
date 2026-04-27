@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Beauty Bazar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-spa"></i>
+            </div>
+            <h1>Beauty Bazar</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html" class="btn-book"><i class="fas fa-calendar-check"></i> Book Now</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header gallery-header">
+        <div class="page-header-content">
+            <span class="page-subtitle">Our Portfolio</span>
+            <h1>Beauty Gallery</h1>
+            <p>Explore our stunning transformations and creative work</p>
+        </div>
+        <div class="page-header-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="hair">Hair</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="nails">Nails</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-showcase">
+        <div class="container">
+            <div class="gallery-masonry">
+                <!-- Hair Styling -->
+                <div class="gallery-item wide" data-category="hair">
+                    <div class="gallery-image hair-style">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Hair Styling</span>
+                                <h3>Modern Balayage</h3>
+                                <p>Beautiful gradient color technique</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image hair-cut">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Hair Cut</span>
+                                <h3>Precision Bob</h3>
+                                <p>Classic elegant style</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item tall" data-category="makeup">
+                    <div class="gallery-image makeup-glam">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Makeup</span>
+                                <h3>Glam Evening Look</h3>
+                                <p>Smoky eyes with nude lips</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bridal -->
+                <div class="gallery-item" data-category="bridal">
+                    <div class="gallery-image bridal-1">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Bridal</span>
+                                <h3>Romantic Bride</h3>
+                                <p>Soft natural bridal look</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item wide" data-category="bridal">
+                    <div class="gallery-image bridal-2">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Bridal</span>
+                                <h3>Elegant Wedding Style</h3>
+                                <p>Complete bridal transformation</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nails -->
+                <div class="gallery-item" data-category="nails">
+                    <div class="gallery-image nails-art">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Nail Art</span>
+                                <h3>Floral Design</h3>
+                                <p>Hand-painted nail art</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nails">
+                    <div class="gallery-image nails-french">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Nail Art</span>
+                                <h3>French Elegance</h3>
+                                <p>Classic French manicure</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More Hair -->
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image hair-curls">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Hair Styling</span>
+                                <h3>Glamorous Curls</h3>
+                                <p>Voluminous curl styling</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item tall" data-category="makeup">
+                    <div class="gallery-image makeup-natural">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <span class="gallery-category">Makeup</span>
+                                <h3>Natural Glow</h3>
+                                <p>Fresh everyday makeup</p>
+                            </div>
+                            <button class="gallery-btn"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="instagram-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">@beautybazar</span>
+                <h2>Follow Us on Instagram</h2>
+                <p>Stay updated with our latest styles and transformations</p>
+            </div>
+            
+            <div class="instagram-grid">
+                <div class="insta-item">
+                    <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="btn-primary">
+                    <i class="fab fa-instagram"></i> Follow @beautybazar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Transformation?</h2>
+                <p>Book your appointment and let us create your perfect look</p>
+                <a href="booking.html" class="btn-primary btn-large">
+                    <i class="fas fa-calendar-check"></i> Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Beauty Bazar</h3>
+                    </div>
+                    <p>Your trusted partner for all beauty needs. Experience luxury and elegance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Beauty Street, Glamour City</p>
+                    <p><i class="fas fa-phone"></i> 9466868680</p>
+                    <p><i class="fas fa-envelope"></i> Beautyartheart2006@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beauty Bazar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.gallery-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Beauty Bazar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-spa"></i>
+            </div>
+            <h1>Beauty Bazar</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html" class="btn-book"><i class="fas fa-calendar-check"></i> Book Now</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header services-header">
+        <div class="page-header-content">
+            <span class="page-subtitle">What We Offer</span>
+            <h1>Our Services</h1>
+            <p>Premium beauty treatments tailored to your unique needs</p>
+        </div>
+        <div class="page-header-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="service-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i> All Services
+                </button>
+                <button class="tab-btn" data-category="hair">
+                    <i class="fas fa-cut"></i> Hair
+                </button>
+                <button class="tab-btn" data-category="face">
+                    <i class="fas fa-spa"></i> Face
+                </button>
+                <button class="tab-btn" data-category="nails">
+                    <i class="fas fa-hand-sparkles"></i> Nails
+                </button>
+                <button class="tab-btn" data-category="makeup">
+                    <i class="fas fa-magic"></i> Makeup
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-detailed">
+        <div class="container">
+            <div class="services-list">
+                <!-- Hair Styling -->
+                <div class="service-detail-card" data-category="hair">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h3>Hair Styling</h3>
+                            <span class="service-price"></span>
+                        </div>
+                        <p class="service-desc">From classic cuts to modern styles, our expert stylists create looks that complement your features and lifestyle. Includes consultation, wash, cut, and styling.</p>
+                        
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Precision Cutting</span>
+                            <span><i class="fas fa-check"></i> Color Treatment</span>
+                            <span><i class="fas fa-check"></i> Blow Dry</span>
+                        </div>
+                        
+                        <a href="booking.html?service=hair-styling" class="btn-service">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Hair Spa -->
+                <div class="service-detail-card" data-category="hair">
+                    <div class="service-icon">
+                        <i class="fas fa-hot-tub"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h3>Hair Spa Treatment</h3>
+                            <span class="service-price"></span>
+                        </div>
+                        <p class="service-desc">Deep conditioning treatments that nourish and revitalize your hair. Perfect for dry, damaged, or chemically treated hair.</p>
+                        
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Deep Conditioning</span>
+                            <span><i class="fas fa-check"></i> Scalp Massage</span>
+                            <span><i class="fas fa-check"></i> Steam Treatment</span>
+                        </div>
+                        
+                        <a href="booking.html?service=hair-spa" class="btn-service">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Facial Treatment -->
+                <div class="service-detail-card featured" data-category="face">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h3>Facial Treatment</h3>
+                            <span class="service-price"></span>
+                        </div>
+                        <p class="service-desc">Rejuvenating facials customized to your skin type. Includes cleansing, exfoliation, extraction, mask, and moisturizing for glowing, healthy skin.</p>
+                        
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Skin Analysis</span>
+                            <span><i class="fas fa-check"></i> Deep Cleansing</span>
+                            <span><i class="fas fa-check"></i> Anti-Aging</span>
+                            <span><i class="fas fa-check"></i> Hydration</span>
+                        </div>
+                        
+                        <a href="booking.html?service=facial" class="btn-service">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Makeup -->
+                <div class="service-detail-card" data-category="makeup">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h3>Makeup Artistry</h3>
+                            <span class="service-price"></span>
+                        </div>
+                        <p class="service-desc">Professional makeup for every occasion. From natural everyday looks to glamorous bridal makeup, we enhance your natural beauty.</p>
+                        
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Bridal Makeup</span>
+                            <span><i class="fas fa-check"></i> Party Makeup</span>
+                            <span><i class="fas fa-check"></i> Photoshoot</span>
+                        </div>
+                        
+                        <a href="booking.html?service=makeup" class="btn-service">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Manicure & Pedicure -->
+                <div class="service-detail-card" data-category="nails">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h3>Manicure & Pedicure</h3>
+                            <span class="service-price"></span>
+                        </div>
+                        <p class="service-desc">Complete nail care with premium polishes and nail art. Includes cuticle care, shaping, massage, and polish application.</p>
+                        
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Nail Art</span>
+                            <span><i class="fas fa-check"></i> Gel Polish</span>
+                            <span><i class="fas fa-check"></i> Spa Treatment</span>
+                        </div>
+                        
+                        <a href="booking.html?service=manicure-pedicure" class="btn-service">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Waxing -->
+                <div class="service-detail-card" data-category="face">
+                    <div class="service-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <h3>Waxing Services</h3>
+                            <span class="service-price"></span>
+                        </div>
+                        <p class="service-desc">Professional hair removal services using premium wax products. Gentle on skin, effective results. Full body and specific area options available.</p>
+                        
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Full Body</span>
+                            <span><i class="fas fa-check"></i> Facial Wax</span>
+                            <span><i class="fas fa-check"></i> Brazilian</span>
+                        </div>
+                        
+                        <a href="booking.html?service=waxing" class="btn-service">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Special Offers</span>
+                <h2>Beauty Packages</h2>
+                <p>Save more with our curated treatment packages</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Bridal Bliss</h3>
+                        <div class="package-price">
+                            <span class="currency"></span>
+                            <span class="amount"></span>
+                        </div>
+                        <span class="package-duration">4-5 hours</span>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Bridal Makeup</li>
+                        <li><i class="fas fa-check"></i> Hairstyling</li>
+                        <li><i class="fas fa-check"></i> Manicure & Pedicure</li>
+                        <li><i class="fas fa-check"></i> Facial Treatment</li>
+                        <li><i class="fas fa-check"></i> Trial Session</li>
+                    </ul>
+                    
+                    <a href="booking.html" class="btn-package">Book Package</a>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="package-badge">Best Value</div>
+                    
+                    <div class="package-header">
+                        <h3>Spa Day Deluxe</h3>
+                        <div class="package-price">
+                            <span class="currency"></span>
+                            <span class="amount"></span>
+                        </div>
+                        <span class="package-duration">3-4 hours</span>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Full Body Massage</li>
+                        <li><i class="fas fa-check"></i> Facial Treatment</li>
+                        <li><i class="fas fa-check"></i> Hair Spa</li>
+                        <li><i class="fas fa-check"></i> Manicure & Pedicure</li>
+                        <li><i class="fas fa-check"></i> Refreshments</li>
+                    </ul>
+                    
+                    <a href="booking.html" class="btn-package">Book Package</a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Quick Refresh</h3>
+                        <div class="package-price">
+                            <span class="currency"></span>
+                            <span class="amount"></span>
+                        </div>
+                        <span class="package-duration">1.5-2 hours</span>
+                    </div>
+                    
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Express Facial</li>
+                        <li><i class="fas fa-check"></i> Blow Dry</li>
+                        <li><i class="fas fa-check"></i> Manicure</li>
+                        <li><i class="fas fa-check"></i> Eyebrow Shaping</li>
+                    </ul>
+                    
+                    <a href="booking.html" class="btn-package">Book Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Not Sure What You Need?</h2>
+                <p>Book a free consultation with our beauty experts</p>
+                <a href="contact.html" class="btn-primary btn-large">
+                    <i class="fas fa-comments"></i> Get Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Beauty Bazar</h3>
+                    </div>
+                    <p>Your trusted partner for all beauty needs. Experience luxury and elegance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Beauty Street, Glamour City</p>
+                    <p><i class="fas fa-phone"></i> 9466868680</p>
+                    <p><i class="fas fa-envelope"></i> Beautyartheart2006@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beauty Bazar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Service Category Tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const cards = document.querySelectorAll('.service-detail-card');
+                
+                cards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Beauty Bazar</title>
+    <link rel="stylesheet" href="/admin/styles.css"></head>
+<body>
+    <div class="login-page">
+        <div class="login-card">
+            <div class="logo" style="margin-bottom: 1.5rem;">
+                <h1 style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Beauty Bazar</h1>
+            </div>
+            
+            <h2>Welcome Back</h2>
+            <p>Please enter your details to book an appointment</p>
+            
+            <form class="login-form" id="loginForm">
+                <input type="text" id="username" placeholder="User Name" required>
+                <input type="tel" id="contact" placeholder="Contact Number" pattern="[0-9]{10}" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            
+            <div class="back-link">
+                <a href="index.html">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const username = document.getElementById('username').value;
+            const contact = document.getElementById('contact').value;
+            const email = document.getElementById('email').value;
+            
+            // Store user info in localStorage
+            const userInfo = {
+                username: username,
+                contact: contact,
+                email: email,
+                loggedIn: true
+            };
+            localStorage.setItem('userInfo', JSON.stringify(userInfo));
+            
+            // Redirect to booking page
+            window.location.href = 'booking.html';
+        });
+    </script>
+</body>
+</html>

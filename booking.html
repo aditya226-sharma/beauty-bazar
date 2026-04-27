@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Beauty Bazar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-spa"></i>
+            </div>
+            <h1>Beauty Bazar</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html" class="active btn-book"><i class="fas fa-calendar-check"></i> Book Now</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section-new">
+        <div class="booking-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="booking-container-new">
+            <!-- Booking Header -->
+            <div class="booking-header">
+                <div class="header-badge">
+                    <i class="fas fa-magic"></i> Book Your Appointment
+                </div>
+                <h1>Beauty Bazar</h1>
+                <p class="header-subtitle">Transform Your Look with Simran Verma</p>
+            </div>
+
+            <div class="booking-wrapper">
+                <!-- Booking Steps -->
+                <div class="booking-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span>Your Info</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span>Service</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span>Date & Time</span>
+                    </div>
+                </div>
+
+                <!-- Booking Form Card -->
+                <div class="booking-form-card">
+                    <form class="booking-form-new" id="bookingForm">
+                        <!-- Step 1: Personal Info -->
+                        <div class="form-step" data-step="1">
+                            <div class="step-header">
+                                <h3><i class="fas fa-user-circle"></i> Personal Information</h3>
+                                <p>Tell us about yourself</p>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <input type="text" id="customerName" required placeholder=" ">
+                                    <label for="customerName">Your Full Name *</label>
+                                    <div class="input-icon"><i class="fas fa-user"></i></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <input type="tel" id="customerPhone" required placeholder=" " pattern="[0-9]{10,13}">
+                                    <label for="customerPhone">WhatsApp Number (with country code) *</label>
+                                    <div class="input-icon"><i class="fab fa-whatsapp"></i></div>
+                                    <div class="input-hint">Example: 919466868680 (91 for India)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-next" onclick="nextStep(2)">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Service Selection -->
+                        <div class="form-step hidden" data-step="2">
+                            <div class="step-header">
+                                <h3><i class="fas fa-sparkles"></i> Select Your Service</h3>
+                                <p>Choose the perfect service for you</p>
+                            </div>
+                            
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="makeup" required>
+                                    <div class="service-option-content">
+                                        <div class="service-icon-large"><i class="fas fa-magic"></i></div>
+                                        <h4>Makeup Artistry</h4>
+                                        <p>Bridal, Party, Photoshoot</p>
+                                        <span class="service-price-tag"></span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="hair-styling">
+                                    <div class="service-option-content">
+                                        <div class="service-icon-large"><i class="fas fa-cut"></i></div>
+                                        <h4>Hair Styling</h4>
+                                        <p>Cuts, Colors, Styling</p>
+                                        <span class="service-price-tag"></span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="facial">
+                                    <div class="service-option-content">
+                                        <div class="service-icon-large"><i class="fas fa-spa"></i></div>
+                                        <h4>Facial Treatment</h4>
+                                        <p>Glow, Anti-aging, Hydration</p>
+                                        <span class="service-price-tag"></span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="manicure-pedicure">
+                                    <div class="service-option-content">
+                                        <div class="service-icon-large"><i class="fas fa-hand-sparkles"></i></div>
+                                        <h4>Manicure & Pedicure</h4>
+                                        <p>Nail Art, Spa, Polish</p>
+                                        <span class="service-price-tag"></span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="waxing">
+                                    <div class="service-option-content">
+                                        <div class="service-icon-large"><i class="fas fa-sun"></i></div>
+                                        <h4>Waxing</h4>
+                                        <p>Full Body, Facial, Brazilian</p>
+                                        <span class="service-price-tag"></span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="hair-spa">
+                                    <div class="service-option-content">
+                                        <div class="service-icon-large"><i class="fas fa-hot-tub"></i></div>
+                                        <h4>Hair Spa</h4>
+                                        <p>Treatment, Massage, Care</p>
+                                        <span class="service-price-tag"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-prev" onclick="prevStep(1)">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="button" class="btn-next" onclick="nextStep(3)">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Date & Time -->
+                        <div class="form-step hidden" data-step="3">
+                            <div class="step-header">
+                                <h3><i class="fas fa-calendar-alt"></i> Select Date & Time</h3>
+                                <p>Choose your preferred slot</p>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <input type="date" id="date" required>
+                                    <label for="date" class="static-label">Preferred Date *</label>
+                                    <div class="input-icon"><i class="fas fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            
+                            <div class="time-slots">
+                                <label class="time-label">Select Time Slot:</label>
+                                <div class="time-options">
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="09:00" required>
+                                        <span>09:00 AM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="10:00">
+                                        <span>10:00 AM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="11:00">
+                                        <span>11:00 AM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="12:00">
+                                        <span>12:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="13:00">
+                                        <span>01:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="14:00">
+                                        <span>02:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="15:00">
+                                        <span>03:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="16:00">
+                                        <span>04:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="17:00">
+                                        <span>05:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="18:00">
+                                        <span>06:00 PM</span>
+                                    </label>
+                                    <label class="time-option">
+                                        <input type="radio" name="time" value="19:00">
+                                        <span>07:00 PM</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group floating-label">
+                                    <textarea id="notes" rows="3" placeholder=" "></textarea>
+                                    <label for="notes">Special Requests (Optional)</label>
+                                    <div class="input-icon"><i class="fas fa-comment"></i></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-prev" onclick="prevStep(2)">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="submit" class="btn-submit-booking">
+                                    <i class="fas fa-check-circle"></i> Confirm Booking
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Success Display -->
+                <div id="tokenDisplay" class="success-display" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    
+                    <h2>Booking Confirmed! 🎉</h2>
+                    <p class="success-text">Your appointment has been successfully scheduled.</p>
+                    
+                    <div class="token-card-new">
+                        <div class="token-header">
+                            <span class="token-label">Token Number</span>
+                            <div class="token-number-new" id="tokenNumber">1</div>
+                        </div>
+                        
+                        <div class="booking-summary">
+                            <div class="summary-item">
+                                <span class="summary-label"><i class="fas fa-user"></i> Name</span>
+                                <span class="summary-value" id="displayName"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label"><i class="fas fa-sparkles"></i> Service</span>
+                                <span class="summary-value" id="displayService"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label"><i class="fas fa-calendar"></i> Date</span>
+                                <span class="summary-value" id="displayDate"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label"><i class="fas fa-clock"></i> Time</span>
+                                <span class="summary-value" id="displayTime"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-actions">
+                        <a href="https://wa.me/9466868680" target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                        </a>
+                        <a href="index.html" class="btn-home">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Form step navigation
+        function nextStep(step) {
+            // Validate current step
+            const currentStep = document.querySelector('.form-step:not(.hidden)');
+            const requiredFields = currentStep.querySelectorAll('[required]');
+            let valid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    valid = false;
+                    field.classList.add('error');
+                    setTimeout(() => field.classList.remove('error'), 3000);
+                }
+            });
+            
+            if (!valid) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Update steps
+            document.querySelectorAll('.form-step').forEach(s => s.classList.add('hidden'));
+            document.querySelector(`.form-step[data-step="${step}"]`).classList.remove('hidden');
+            
+            // Update step indicators
+            document.querySelectorAll('.step').forEach((s, index) => {
+                if (index < step) {
+                    s.classList.add('active', 'completed');
+                } else if (index === step - 1) {
+                    s.classList.add('active');
+                    s.classList.remove('completed');
+                } else {
+                    s.classList.remove('active', 'completed');
+                }
+            });
+        }
+        
+        function prevStep(step) {
+            document.querySelectorAll('.form-step').forEach(s => s.classList.add('hidden'));
+            document.querySelector(`.form-step[data-step="${step}"]`).classList.remove('hidden');
+            
+            document.querySelectorAll('.step').forEach((s, index) => {
+                if (index < step) {
+                    s.classList.add('completed');
+                    s.classList.remove('active');
+                } else if (index === step - 1) {
+                    s.classList.add('active');
+                    s.classList.remove('completed');
+                } else {
+                    s.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        // Set minimum date
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+        });
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const customerName = document.getElementById('customerName').value;
+            const customerPhone = document.getElementById('customerPhone').value;
+            const service = document.querySelector('input[name="service"]:checked')?.value;
+            const date = document.getElementById('date').value;
+            const time = document.querySelector('input[name="time"]:checked')?.value;
+            const notes = document.getElementById('notes').value;
+            
+            if (!service || !time) {
+                alert('Please select a service and time slot');
+                return;
+            }
+            
+            // Service names
+            const serviceNames = {
+                'hair-styling': 'Hair Styling',
+                'facial': 'Facial Treatment',
+                'makeup': 'Makeup',
+                'manicure-pedicure': 'Manicure & Pedicure',
+                'waxing': 'Waxing',
+                'hair-spa': 'Hair Spa'
+            };
+            
+            const serviceName = serviceNames[service];
+            
+            // Disable submit button during API call
+            const submitBtn = document.querySelector('.btn-submit-booking');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            // Prepare booking data for API
+            const bookingData = {
+                name: customerName,
+                phone: customerPhone,
+                email: null,
+                service: serviceName,
+                sub_service: null,
+                appointment_date: date,
+                appointment_time: time,
+                notes: notes || null
+            };
+            
+            // Send to API
+            const API_BASE_URL = window.location.origin + '/api';
+            
+            fetch(`${API_BASE_URL}/bookings`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(bookingData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Get token number from API response
+                    const currentToken = data.data.id;
+                    
+                    // Hide form, show success
+                    document.querySelector('.booking-form-card').style.display = 'none';
+                    document.querySelector('.booking-steps').style.display = 'none';
+                    document.getElementById('tokenDisplay').style.display = 'block';
+                    
+                    // Update display
+                    document.getElementById('tokenNumber').textContent = currentToken;
+                    document.getElementById('displayName').textContent = customerName;
+                    document.getElementById('displayService').textContent = serviceName;
+                    document.getElementById('displayDate').textContent = date;
+                    document.getElementById('displayTime').textContent = time;
+                    
+                    // Send WhatsApp messages
+                    const whatsappMessage = `🌸 *New Booking at Beauty Bazar* 🌸
+
+👤 *Customer Details:*
+Name: ${customerName}
+Phone: ${customerPhone}
+
+📋 *Booking Details:*
+Token Number: #${currentToken}
+Service: ${serviceName}
+Date: ${date}
+Time: ${time}
+${notes ? `Special Requests: ${notes}` : ''}
+
+Thank you for choosing Beauty Bazar! 💕
+
+Powered by Simran Verma Makeup Artist`;
+                    
+                    const simranWhatsApp = '919466868680';
+                    const whatsappURL = `https://wa.me/${simranWhatsApp}?text=${encodeURIComponent(whatsappMessage)}`;
+                    
+                    setTimeout(() => {
+                        window.open(whatsappURL, '_blank');
+                    }, 1000);
+                    
+                    setTimeout(() => {
+                        const customerMessage = `🌸 *Booking Confirmation - Beauty Bazar* 🌸
+
+Hello ${customerName}! ✨
+
+Your appointment has been booked successfully!
+
+📋 *Booking Details:*
+🎫 Token Number: #${currentToken}
+💄 Service: ${serviceName}
+📅 Date: ${date}
+⏰ Time: ${time}
+${notes ? `📝 Special Requests: ${notes}` : ''}
+
+📞 For any queries, contact: Simran Verma - 9466868680
+
+Thank you for choosing Beauty Bazar! We look forward to serving you. 💕
+
+_Beauty Bazar - Sundarta Ka Pratik_
+_Professional Makeup Artistry by Simran Verma_`;
+                        
+                        const customerWhatsAppURL = `https://wa.me/${customerPhone}?text=${encodeURIComponent(customerMessage)}`;
+                        window.open(customerWhatsAppURL, '_blank');
+                    }, 2000);
+                } else {
+                    alert('Error: ' + (data.message || 'Failed to create booking'));
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Confirm Booking';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error creating booking. Please try again or contact us directly.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Confirm Booking';
+            });
+        });
+        
+        // Service option selection
+        document.querySelectorAll('.service-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.service-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                this.querySelector('input').checked = true;
+            });
+        });
+        
+        // Time option selection
+        document.querySelectorAll('.time-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.time-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                this.querySelector('input').checked = true;
+            });
+        });
+    </script>
+</body>
+</html>
