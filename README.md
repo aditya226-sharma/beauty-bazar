@@ -1,0 +1,3 @@
+# beauty-bazar
+
+Project repository.
