@@ -6,3 +6,4 @@ database.sqlite
 *.log
 .vscode/
 .idea/
+.vercel
